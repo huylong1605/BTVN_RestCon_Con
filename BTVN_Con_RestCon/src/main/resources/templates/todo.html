@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5">Todo List</h1>
+    <ul class="list-group mt-3">
+        <li class="list-group-item" th:each="item : ${todoList}" th:text="${item}"></li>
+    </ul>
+</div>
+</body>
+</html>

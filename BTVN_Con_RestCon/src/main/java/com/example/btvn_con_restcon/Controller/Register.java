@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 @RequestMapping("/Controllers")
 public class Register {
@@ -26,4 +29,6 @@ public class Register {
         model.addAttribute("address", address);
         return "result";
     }
+
+
 }
