@@ -16,18 +16,10 @@
     <h2>User Information</h2>
     <table class="table table-bordered">
         <tbody>
-        <tr>
-            <th>User Name</th>
-            <td th:text="${userName}"></td>
+        <tr th:each="c : ${user}">
+            <td th:text="${c}"></td>
         </tr>
-        <tr>
-            <th>Password</th>
-            <td th:text="${password}"></td>
-        </tr>
-        <tr>
-            <th>Address</th>
-            <td th:text="${address}"></td>
-        </tr>
+
         </tbody>
     </table>
 </div>

@@ -11,12 +11,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/RestCon/User")
 public class RestUser {
-    @GetMapping("/ListUser")
+  /*  @GetMapping("/ListUser")
     public List<User> ListUser() {
         List<User> u = new ArrayList<>();
         u.add(new User("Huy Long", 1605, "Ha Noi"));
         u.add(new User("Huy Thang", 0504, "Ha Noi"));
         return u;
-    }
+    }*/
 }
 
