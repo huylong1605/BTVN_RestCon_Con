@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface TodoService {
 
-    List<String> addActoon(String action);
+    List<String> addAction(String action);
 
 
 }
