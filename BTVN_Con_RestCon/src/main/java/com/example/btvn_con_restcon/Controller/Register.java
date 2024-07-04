@@ -3,6 +3,7 @@ package com.example.btvn_con_restcon.Controller;
 import com.example.btvn_con_restcon.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class Register {
 
     private final TodoService todoService;
+
+    @Value("${server.port}")
+    private String port;
 
     @Autowired
     public Register(@Qualifier("todoServiceImplement2") TodoService todoService) {
@@ -35,5 +39,12 @@ public class Register {
         return "userForm";
     }
 
+    @GetMapping("/Test")
+    public String TestValue(Model model){
+
+        model.addAttribute("port", port);
+
+        return "Test";
+    }
 
 }
